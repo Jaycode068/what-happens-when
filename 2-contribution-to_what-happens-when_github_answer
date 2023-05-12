@@ -1,0 +1,27 @@
+When a user types https://www.google.com into a browser and press Enter, a series of events occur behind the scenes before the webpage finally loads on your screen. Let's take a closer look at what happens at each stage.
+
+DNS Request:
+The first step that occurs is a DNS (Domain Name System) request. DNS is the system that maps a website’s domain name (in this case, www.google.com) to its corresponding IP address. The request is sent from your computer to your ISP’s (Internet Service Provider) DNS servers, and then to the root DNS servers.
+
+TCP/IP:
+Once the DNS request has been resolved, your computer establishes a TCP/IP (Transmission Control Protocol/Internet Protocol) connection with the server at the IP address that was returned. TCP/IP is a set of protocols that enable communication between devices over the internet.
+
+Firewall:
+The server that the connection is being established with might have a firewall installed to protect against malicious traffic. The firewall will check if the incoming traffic is legitimate and allow the connection to proceed if it meets the necessary criteria.
+
+HTTPS/SSL:
+Assuming the firewall allows the connection, the next step is an HTTPS/SSL (Hypertext Transfer Protocol Secure/Secure Sockets Layer) handshake. HTTPS is a secure version of the HTTP protocol used to transfer data between your browser and the server. SSL is the encryption protocol that ensures that the data being transmitted is secure. During the handshake, your browser and the server agree on a set of cryptographic algorithms to use for the session, exchange certificates to verify each other's identities, and establish a secure connection.
+
+Load-balancer:
+The server that your connection is established with may also be a load-balancer, which is a device that distributes incoming traffic across multiple servers. Load-balancers are used to ensure that no one server gets overloaded with traffic and causes the website to slow down or crash. In the case of Google, there are many load-balancers, which are distributed across the globe to ensure that users are connected to the nearest server.
+
+Web Server:
+Once the secure connection is established, your browser sends an HTTP request to the server, asking for the specific webpage you requested (in this case, the Google homepage). The server receives the request and retrieves the necessary resources to generate the webpage, including HTML, CSS, and JavaScript files.
+
+Application Server:
+The server might also have an application server installed to generate dynamic content, such as search results or user-specific content. The application server generates the dynamic content and sends it back to the web server.
+
+Database:
+Finally, the web server retrieves any data needed to generate the webpage from a database, such as user account information or search history. The database sends the data back to the web server, which generates the final webpage and sends it back to your browser.
+
+In conclusion, when you type https://www.google.com into your browser and press Enter, a complex series of steps occurs behind the scenes to retrieve the webpage and display it on your screen. These steps include DNS resolution, TCP/IP connection establishment, firewall checks, HTTPS/SSL handshake, load-balancing, web server resource retrieval, application server dynamic content generation, and database data retrieval.
